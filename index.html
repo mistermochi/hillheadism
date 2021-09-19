@@ -88,8 +88,8 @@
       },
       trackUserLocation: true
     }));
-
-map.on("load", () => {
+	  
+	  
 
 	function addLocation(geoj){
   	
@@ -122,19 +122,14 @@ map.on("load", () => {
   });
   
   }
-  
-  function loadDoc() {
+
+map.on("load", () => {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
     	addLocation(this.responseText);
     }
     xhttp.open("GET", "https://hillheadism.github.io/routes/");
     xhttp.send();
-	}
-  
-  loadDoc();
 })
 
-  </script>
-</body>
-</html>
+  </script> </body> </html>
