@@ -124,12 +124,7 @@
   }
 
 map.on("load", () => {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-    	addLocation(this.responseText);
-    }
-    xhttp.open("GET", "https://hillheadism.github.io/routes/route1.json");
-    xhttp.send();
+	addLocation("https://hillheadism.github.io/routes/route1.json")
 })
 
   </script> </body> </html>
