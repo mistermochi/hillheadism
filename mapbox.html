@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="/static/css/cloud_base.css?t=1630916432" rel="stylesheet" />
+  <style>
+    #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+  </style>
+</head>
+<body>
+  <div id="map">
+  </div>
+  <script>
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'https://api.maptiler.com/maps/outdoor/style.json?key=43ZfdH6Bw8giyU7r8lXv',
+      center: [114.258801, 22.327217],
+      zoom: 16
+    });
+    map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+			showUserHeading: true,
+      trackUserLocation: true
+    }));
+  </script>
+</body>
+</html>
