@@ -581,7 +581,7 @@
 
 map.on("load", () => {
 	fetch("https://hillheadism.github.io/routes/route1.gpx")
-	.then(res => addLocation(res.text()))
+	.then(res => res.text().then(gpx => addLocation(gpx)))
 })
 
 
