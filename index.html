@@ -581,7 +581,12 @@
 
 map.on("load", () => {
 	fetch("https://hillheadism.github.io/routes/route1.gpx")
-	.then(res => res.text().then(gpx => addLocation(gpx)))
+	.then(res => res.text().then(data => {
+		
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "application/xml");
+		addLocation(xml)
+	}))
 })
 
 
