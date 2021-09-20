@@ -588,7 +588,7 @@ map.on("load", () => {
 		
     const parser = new DOMParser();
     const xml = parser.parseFromString(data, "application/xml");
-		addLocation(xml, links[i])
+		addLocation(xml,link.url)
 	}))
 	}}))
 	
