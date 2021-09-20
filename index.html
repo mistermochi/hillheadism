@@ -582,13 +582,13 @@
 
 map.on("load", () => {
 	fetch("https://hillheadism.github.io/routes/routes.json")
-	.then(res => res.json().then(data => {
-		for (var i = 0; i < data.length; i++){
-		 fetch(data[i]).then(link => link.text().then(data => {
+	.then(res => res.json().then(links => {
+		for (var i = 0; i < links.length; i++){
+		 fetch(links[i]).then(link => link.text().then(data => {
 		
     const parser = new DOMParser();
     const xml = parser.parseFromString(data, "application/xml");
-		addLocation(xml, data[i])
+		addLocation(xml, links[i])
 	}))
 	}}))
 	
