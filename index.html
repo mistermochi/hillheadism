@@ -583,14 +583,14 @@ map.on("load", () => {
 	fetch("https://hillheadism.github.io/routes/routes.json")
 	.then(res => res.json().then(data => {
 		for (var i = 0; i < data.length; i++){
-			return fetch(data[i])
-		}}))
-	.then(link => link.text().then(data => {
+		 fetch(data[i]).then(link => link.text().then(data => {
 		
     const parser = new DOMParser();
     const xml = parser.parseFromString(data, "application/xml");
 		addLocation(xml)
 	}))
+	}}))
+	
   
   
 })
