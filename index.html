@@ -89,46 +89,7 @@
       trackUserLocation: true
     }));
 	  
-	  
-
-	function addLocation(gpx){
-  	
-  map.addSource("running-routes", {
-    type: "geojson",
-    // a reference to the converted data
-    // could come from a file, API, etc
-    data: toGeoJSON(gpx),
-  });
-
-  map.addLayer({
-    id: "running-routes-line",
-    type: "line",
-    source: "running-routes",
-    paint: {
-      "line-color": "#15cc09",
-      "line-width": 4,
-    },
-  });
-  
-  map.on('click', "running-routes-line", function (e) {
-    new maplibregl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML(e.features[0].properties.name)
-      .addTo(map);
-    
-    map.flyTo({
-    	center: e.lngLat
-    });
-  });
-  
-  }
-
-map.on("load", () => {
-	fetch("https://hillheadism.github.io/routes/route1.gpx")
-	.then(res => addLocation(res.text()))
-})
-
-var toGeoJSON = (function() {
+function toGeoJSON() {
 
     var removeSpace = /\s*/g,
         trimSpace = /^\s*|\s*$/g,
@@ -584,5 +545,45 @@ var toGeoJSON = (function() {
     };
     return t;
 })();
+	  
+	  
+
+	function addLocation(gpx){
+  	
+  map.addSource("running-routes", {
+    type: "geojson",
+    // a reference to the converted data
+    // could come from a file, API, etc
+    data: toGeoJSON(gpx),
+  });
+
+  map.addLayer({
+    id: "running-routes-line",
+    type: "line",
+    source: "running-routes",
+    paint: {
+      "line-color": "#15cc09",
+      "line-width": 4,
+    },
+  });
+  
+  map.on('click', "running-routes-line", function (e) {
+    new maplibregl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML(e.features[0].properties.name)
+      .addTo(map);
+    
+    map.flyTo({
+    	center: e.lngLat
+    });
+  });
+  
+  }
+
+map.on("load", () => {
+	fetch("https://hillheadism.github.io/routes/route1.gpx")
+	.then(res => addLocation(res.text()))
+})
+
 
   </script> </body> </html>
