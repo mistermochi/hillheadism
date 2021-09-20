@@ -547,13 +547,14 @@
 })();
 
 	function addLocation(gpx){
-		console.log(gpx);
+		var geoJ = toGeoJSON.gpx(gpx);
+		console.log(geoJ);
   	
   map.addSource("running-routes", {
     type: "geojson",
     // a reference to the converted data
     // could come from a file, API, etc
-    data: toGeoJSON.gpx(gpx),
+    data: geoJ,
   });
 
   map.addLayer({
