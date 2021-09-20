@@ -546,11 +546,11 @@
     return t;
 })();
 
-	function addLocation(gpx, id){
+	function addLocation(gpx, url){
 		var geoJ = toGeoJSON.gpx(gpx);
-		console.log(geoJ);
+		console.log(url);
   	
-  map.addSource(id, {
+  map.addSource(url, {
     type: "geojson",
     // a reference to the converted data
     // could come from a file, API, etc
@@ -558,16 +558,16 @@
   });
 
   map.addLayer({
-    id: id,
+    id: url,
     type: "line",
-    source: id,
+    source: url,
     paint: {
       "line-color": "#15cc09",
       "line-width": 4,
     },
   });
   
-  map.on('click', id, function (e) {
+  map.on('click', url, function (e) {
     new maplibregl.Popup()
       .setLngLat(e.lngLat)
       .setHTML(e.features[0].properties.name)
