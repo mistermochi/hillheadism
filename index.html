@@ -88,8 +88,8 @@
       },
       trackUserLocation: true
     }));
-	  
-function toGeoJSON() {
+	  var toGeoJSON = (function() {
+    'use strict';
 
     var removeSpace = /\s*/g,
         trimSpace = /^\s*|\s*$/g,
@@ -544,9 +544,7 @@ function toGeoJSON() {
         }
     };
     return t;
-}
-	  
-	  
+})();
 
 	function addLocation(gpx){
   	
@@ -554,7 +552,7 @@ function toGeoJSON() {
     type: "geojson",
     // a reference to the converted data
     // could come from a file, API, etc
-    data: toGeoJSON(gpx),
+    data: toGeoJSON.gpx(gpx),
   });
 
   map.addLayer({
