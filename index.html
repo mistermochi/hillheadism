@@ -546,11 +546,11 @@
     return t;
 })();
 
-	function addLocation(gpx){
+	function addLocation(gpx, id){
 		var geoJ = toGeoJSON.gpx(gpx);
 		console.log(geoJ);
   	
-  map.addSource("running-routes", {
+  map.addSource(id, {
     type: "geojson",
     // a reference to the converted data
     // could come from a file, API, etc
@@ -558,7 +558,7 @@
   });
 
   map.addLayer({
-    id: "running-routes-line",
+    id: id,
     type: "line",
     source: "running-routes",
     paint: {
@@ -567,7 +567,7 @@
     },
   });
   
-  map.on('click', "running-routes-line", function (e) {
+  map.on('click', id, function (e) {
     new maplibregl.Popup()
       .setLngLat(e.lngLat)
       .setHTML(e.features[0].properties.name)
@@ -588,7 +588,7 @@ map.on("load", () => {
 		
     const parser = new DOMParser();
     const xml = parser.parseFromString(data, "application/xml");
-		addLocation(xml)
+		addLocation(xml, data[i])
 	}))
 	}}))
 	
