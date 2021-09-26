@@ -3,7 +3,7 @@
   "name": "taiwan-topo",
   "metadata": {
     "mapbox:type": "template",
-    "openmaptiles:version": "3.x",
+    "hillheadism:version": "3.x",
     "maputnik:renderer": "mbgljs"
   },
   "center": [
@@ -50,7 +50,7 @@
         "fill-color": "hsl(47, 13%, 86%)",
         "fill-opacity": 0.7
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landuse",
       "type": "fill"
     },
@@ -65,7 +65,7 @@
         "fill-color": "hsl(82, 46%, 72%)",
         "fill-opacity": 0.45
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -92,7 +92,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -114,7 +114,7 @@
       "paint": {
         "fill-color": "hsl(205, 56%, 73%)"
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "water",
       "type": "fill"
     },
@@ -137,7 +137,7 @@
         "fill-color": "hsl(205, 56%, 73%)",
         "fill-opacity": 0.7
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "water",
       "type": "fill"
     },
@@ -152,7 +152,7 @@
         "fill-color": "hsl(47, 26%, 88%)",
         "fill-opacity": 0.8
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -179,7 +179,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -199,7 +199,7 @@
         "fill-color": "rgba(232, 214, 38, 1)",
         "fill-opacity": 0.3
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -213,7 +213,7 @@
       "paint": {
         "fill-color": "#eae0d0"
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landuse",
       "type": "fill"
     },
@@ -240,7 +240,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
     },
@@ -292,7 +292,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "waterway",
       "type": "line"
     },
@@ -334,7 +334,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "waterway",
       "type": "line"
     },
@@ -380,7 +380,7 @@
           1
         ]
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "waterway",
       "type": "line"
     },
@@ -429,7 +429,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -464,7 +464,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "building",
       "type": "fill"
     },
@@ -486,7 +486,7 @@
       "paint": {
         "text-color": "rgba(212, 177, 146, 1)"
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "housenumber",
       "type": "symbol"
     },
@@ -494,7 +494,7 @@
       "id": "road_area_pier",
       "type": "fill",
       "metadata": {},
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -518,7 +518,7 @@
       "id": "road_pier",
       "type": "line",
       "metadata": {},
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "filter": [
         "all",
@@ -574,7 +574,7 @@
         "fill-color": "hsl(47, 26%, 88%)",
         "fill-opacity": 0.5
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "fill"
     },
@@ -618,7 +618,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -658,7 +658,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line",
       "minzoom": 13
@@ -707,7 +707,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -758,7 +758,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -798,7 +798,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "aeroway",
       "type": "fill"
     },
@@ -842,7 +842,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "aeroway",
       "type": "line"
     },
@@ -886,7 +886,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "aeroway",
       "type": "line"
     },
@@ -926,7 +926,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -966,7 +966,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1006,7 +1006,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1041,7 +1041,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1068,7 +1068,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1120,7 +1120,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "waterway",
       "type": "line"
     },
@@ -1159,7 +1159,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "waterway",
       "type": "line"
     },
@@ -1216,7 +1216,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1276,7 +1276,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1320,7 +1320,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1367,7 +1367,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation",
       "type": "line"
     },
@@ -1387,7 +1387,7 @@
           1
         ]
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "boundary",
       "type": "line"
     },
@@ -1426,7 +1426,7 @@
           ]
         }
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "boundary",
       "type": "line"
     },
@@ -1466,7 +1466,7 @@
         "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 1
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "poi",
       "type": "symbol"
     },
@@ -1500,7 +1500,7 @@
         "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 1
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "aerodrome_label",
       "type": "symbol"
     },
@@ -1539,7 +1539,7 @@
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 2
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "transportation_name",
       "type": "symbol"
     },
@@ -1588,7 +1588,7 @@
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 2
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "place",
       "type": "symbol"
     },
@@ -1633,7 +1633,7 @@
         "text-halo-color": "hsla(0, 0%, 100%, 0.75)",
         "text-halo-width": 2
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "place",
       "type": "symbol"
     },
@@ -1682,7 +1682,7 @@
         "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "place",
       "type": "symbol"
     },
@@ -1731,7 +1731,7 @@
         "text-halo-color": "rgba(255,255,255,0.75)",
         "text-halo-width": 2
       },
-      "source": "openmaptiles",
+      "source": "hillheadism",
       "source-layer": "place",
       "type": "symbol"
     }
