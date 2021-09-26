@@ -11,15 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@mapbox/mapbox-gl-sync-move@0.3.0/index.min.js"></script>
     <style>
         body { margin:0; padding:0; }
-        #map1 { position:absolute; top:0; left: 0; width:50%; height: 100% }
-        #map2 { position:absolute; top:0; right: 0; width:50%; height: 100% }
-        #menu { position: absolute; background: #fff; padding: 10px; font-family: 'Open Sans', sans-serif; }
+        #map1 { position:absolute; top:0; left: 0; width:100%; height: 100% }
     </style>
 </head>
 <body>
-
 <div id='map1'></div>
-<div id='map2'></div>
 <script>
     var map1 = new mapboxgl.Map({
         container: 'map1',
@@ -28,17 +24,6 @@
         zoom: 10,
         hash: true
     });
-    var map2 = new mapboxgl.Map({
-        container: 'map2',
-        style: './styles/maptiler-topographique.json',
-        center: [114.12302,22.36060],
-        zoom: 10,
-        hash: true
-    });
-
-    syncMaps(map1, map2)
-    map1.addControl(new MapboxInspect({ showInspectMap: true }));
-    map2.addControl(new MapboxInspect({ showInspectMap: true }));
 </script>
 
 </body>
