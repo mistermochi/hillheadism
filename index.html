@@ -14,16 +14,13 @@
 <body>
 <div id="map"></div>
 
-<script>
-var bounds = [ [2.68, 50.72], [7.55, 54.12] ];
+<script
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2tsZXVuZW4iLCJhIjoiY2lvYndseWF4MDA1NXZqbTVsNzI1cTZxZSJ9.OiaID7onSRgGBWRwmgOZqQ';
 var map = new mapboxgl.Map({
   container: 'map',
-  center: [ (bounds[0][0] + bounds[1][0]) / 2, (bounds[0][1] + bounds[1][1]) / 2],
-  zoom: 9,
-  minZoom: 5,
-  maxBounds: bounds,
+        center: [114.12302,22.36060],
+        zoom: 10,
   style: './styles/netherlands.json'
 });
 
