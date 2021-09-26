@@ -23,8 +23,8 @@ var map = new mapboxgl.Map({
   center: [ (bounds[0][0] + bounds[1][0]) / 2, (bounds[0][1] + bounds[1][1]) / 2],
   zoom: 9,
   minZoom: 5,
-  style: 'netherlands_style.json',
-  maxBounds: bounds 
+  maxBounds: bounds,
+  style: './styles/netherlands.json'
 });
 
 map.addControl(new mapboxgl.NavigationControl());
