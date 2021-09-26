@@ -228,6 +228,6 @@
   ],
   "tile_grid": "mercator",
   "tiles": [
-    "https://mistermochi.github.io/mapstew/tiles/{z}/{x}/{y}.pbf"
+    "https://mistermochi.github.io/hillheadism/tiles/{z}/{x}/{y}.pbf"
   ]
 }
