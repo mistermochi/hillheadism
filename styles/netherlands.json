@@ -15,7 +15,7 @@
       "url": "https://mistermochi.github.io/hillheadism/resources/tiles.json"
     }
   },
-  "glyphs": "https://blog.kleunen.nl/fonts/{fontstack}/{range}.pbf",
+  "glyphs": "https://mistermochi.github.io/hillheadism/static/fonts/KlokanTech%20{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
