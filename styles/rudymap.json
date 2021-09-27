@@ -17,11 +17,26 @@
     "hillheadism": {
       "type": "vector",
       "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/tiles/tile.json"
+    },
+    "terrain-rgb": {
+      "type": "raster-dem",
+      "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/terrain_rgb/tile.json"
     }
   },
-  "sprite": "https://raw.githubusercontent.com/mistermochi/hillheadism/master/resources/rudymap",
   "glyphs": "https://mistermochi.github.io/hillheadism/static/fonts/KlokanTech%20{fontstack}/{range}.pbf",
   "layers": [
+    {
+      "id": "hillshade",
+      "type": "hillshade",
+      "source": "terrain-rgb",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "hillshade-exaggeration": 0.6,
+        "hillshade-shadow-color": "rgba(49, 49, 49, 1)"
+      }
+    },
     {
       "id": "background",
       "paint": {
