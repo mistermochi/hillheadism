@@ -20,24 +20,11 @@
     },
     "terrain-rgb": {
       "type": "raster-dem",
-      "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/terrain_rgb/tile.json",
-      "tileSize": 256
+      "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/terrain_rgb/tile.json"
     }
   },
   "glyphs": "https://mistermochi.github.io/hillheadism/static/fonts/KlokanTech%20{fontstack}/{range}.pbf",
   "layers": [
-    {
-      "id": "hillshade",
-      "type": "hillshade",
-      "source": "terrain-rgb",
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "hillshade-exaggeration": 0.6,
-        "hillshade-shadow-color": "rgba(49, 49, 49, 1)"
-      }
-    },
     {
       "id": "background",
       "paint": {
@@ -259,6 +246,18 @@
       "source": "hillheadism",
       "source-layer": "landcover",
       "type": "fill"
+    },
+    {
+      "id": "hillshade",
+      "type": "hillshade",
+      "source": "terrain-rgb",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "hillshade-exaggeration": 0.6,
+        "hillshade-shadow-color": "rgba(49, 49, 49, 1)"
+      }
     },
     {
       "filter": [
