@@ -20,7 +20,8 @@
     },
     "terrain-rgb": {
       "type": "raster-dem",
-      "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/terrain_rgb/tile.json"
+      "url": "https://raw.githubusercontent.com/mistermochi/hillheadism/main/terrain_rgb/tile.json",
+      "tileSize": 256
     }
   },
   "glyphs": "https://mistermochi.github.io/hillheadism/static/fonts/KlokanTech%20{fontstack}/{range}.pbf",
