@@ -1957,20 +1957,48 @@
       }
     },
     {
+      "id": "place-hamletsuburb",
+      "type": "symbol",
+      "metadata": {"mapbox:group": "1444849242106.713"},
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "minzoom": 13,
+      "filter": ["all", ["in", "class", "hamlet", "suburb"]],
+      "layout": {
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": ["Noto Sans Bold"],
+        "text-letter-spacing": 0.1,
+        "text-max-width": 9,
+        "text-size": {"base": 1.2, "stops": [[12, 10], [15, 14]]},
+        "text-transform": "uppercase",
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgba(51, 51, 51, 1)",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      }
+    },
+    {
       "id": "place-other",
       "type": "symbol",
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 11,
+      "minzoom": 14,
       "filter": [
-        "!in",
-        "class",
-        "city",
-        "town",
-        "village",
-        "country",
-        "continent"
+        "all",
+        [
+          "!in",
+          "class",
+          "hamlet",
+          "suburb",
+          "city",
+          "town",
+          "village",
+          "country",
+          "continent"
+        ]
       ],
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2047,161 +2075,6 @@
         "text-color": "#333",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.2
-      }
-    },
-    {
-      "id": "place-city-capital",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "filter": ["all", ["==", "capital", 2], ["==", "class", "city"]],
-      "layout": {
-        "icon-image": "star_11",
-        "icon-size": 0.8,
-        "text-anchor": "left",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-max-width": 8,
-        "text-offset": [0.4, 0],
-        "text-size": {"base": 1.2, "stops": [[7, 14], [11, 24]]},
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#333",
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 1.2
-      }
-    },
-    {
-      "id": "place-country-other",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        ["==", "class", "country"],
-        [">=", "rank", 3],
-        ["!has", "iso_a2"]
-      ],
-      "layout": {
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Italic"],
-        "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 11], [7, 17]]},
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#334",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "place-country-3",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        ["==", "class", "country"],
-        [">=", "rank", 3],
-        ["has", "iso_a2"]
-      ],
-      "layout": {
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Bold"],
-        "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 11], [7, 17]]},
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#334",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "place-country-2",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        ["==", "class", "country"],
-        ["==", "rank", 2],
-        ["has", "iso_a2"]
-      ],
-      "layout": {
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Bold"],
-        "text-max-width": 6.25,
-        "text-size": {"stops": [[2, 11], [5, 17]]},
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#334",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "place-country-1",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "filter": [
-        "all",
-        ["==", "class", "country"],
-        ["==", "rank", 1],
-        ["has", "iso_a2"]
-      ],
-      "layout": {
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Bold"],
-        "text-max-width": 6.25,
-        "text-size": {"stops": [[1, 11], [4, 17]]},
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#334",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 2
-      }
-    },
-    {
-      "id": "place-continent",
-      "type": "symbol",
-      "metadata": {"mapbox:group": "1444849242106.713"},
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "maxzoom": 1,
-      "filter": ["==", "class", "continent"],
-      "layout": {
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Bold"],
-        "text-max-width": 6.25,
-        "text-size": 14,
-        "text-transform": "uppercase",
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#334",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 2
       }
     }
   ],
