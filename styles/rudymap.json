@@ -36,24 +36,6 @@
   "glyphs": "https://mistermochi.github.io/hillheadism/static/fonts/KlokanTech%20{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
-      "type": "background",
-      "paint": {"background-color": "#f8f4f0"}
-    },
-    {
-      "id": "landcover-glacier",
-      "type": "fill",
-      "metadata": {"mapbox:group": "1444849388993.3071"},
-      "source": "openmaptiles",
-      "source-layer": "landcover",
-      "filter": ["==", "subclass", "glacier"],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "#fff",
-        "fill-opacity": {"base": 1, "stops": [[0, 0.9], [10, 0.3]]}
-      }
-    },
-    {
       "id": "landuse-residential",
       "type": "fill",
       "metadata": {"mapbox:group": "1444849388993.3071"},
@@ -625,108 +607,6 @@
         "hillshade-illumination-anchor": "map",
         "hillshade-accent-color": "rgba(43, 90, 29, 1)",
         "hillshade-exaggeration": 0.3
-      }
-    },
-    {
-      "id": "aeroway-taxiway-casing",
-      "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
-      "source": "openmaptiles",
-      "source-layer": "aeroway",
-      "minzoom": 12,
-      "filter": ["all", ["in", "class", "taxiway"]],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(153, 153, 153, 1)",
-        "line-opacity": 1,
-        "line-width": {"base": 1.5, "stops": [[11, 2], [17, 12]]}
-      }
-    },
-    {
-      "id": "aeroway-runway-casing",
-      "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
-      "source": "openmaptiles",
-      "source-layer": "aeroway",
-      "minzoom": 12,
-      "filter": ["all", ["in", "class", "runway"]],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(153, 153, 153, 1)",
-        "line-opacity": 1,
-        "line-width": {"base": 1.5, "stops": [[11, 5], [17, 55]]}
-      }
-    },
-    {
-      "id": "aeroway-area",
-      "type": "fill",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
-      "source": "openmaptiles",
-      "source-layer": "aeroway",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        ["==", "$type", "Polygon"],
-        ["in", "class", "runway", "taxiway"]
-      ],
-      "layout": {"visibility": "visible"},
-      "paint": {
-        "fill-color": "rgba(255, 255, 255, 1)",
-        "fill-opacity": {"base": 1, "stops": [[13, 0], [14, 1]]}
-      }
-    },
-    {
-      "id": "aeroway-taxiway",
-      "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
-      "source": "openmaptiles",
-      "source-layer": "aeroway",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        ["in", "class", "taxiway"],
-        ["==", "$type", "LineString"]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-opacity": {"base": 1, "stops": [[11, 0], [12, 1]]},
-        "line-width": {"base": 1.5, "stops": [[11, 1], [17, 10]]}
-      }
-    },
-    {
-      "id": "aeroway-runway",
-      "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
-      "source": "openmaptiles",
-      "source-layer": "aeroway",
-      "minzoom": 4,
-      "filter": [
-        "all",
-        ["in", "class", "runway"],
-        ["==", "$type", "LineString"]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": "rgba(255, 255, 255, 1)",
-        "line-opacity": {"base": 1, "stops": [[11, 0], [12, 1]]},
-        "line-width": {"base": 1.5, "stops": [[11, 4], [17, 50]]}
       }
     },
     {
@@ -1605,28 +1485,6 @@
       }
     },
     {
-      "id": "water-name-ocean",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "water_name",
-      "filter": ["all", ["==", "$type", "Point"], ["==", "class", "ocean"]],
-      "layout": {
-        "symbol-placement": "point",
-        "symbol-spacing": 350,
-        "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Italic"],
-        "text-letter-spacing": 0.2,
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "text-size": 14
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-color": "rgba(255,255,255,0.7)",
-        "text-halo-width": 1.5
-      }
-    },
-    {
       "id": "water-name-other",
       "type": "symbol",
       "source": "openmaptiles",
@@ -1902,33 +1760,6 @@
       "paint": {
         "text-color": "#765",
         "text-halo-blur": 0.5,
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "airport-label-major",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "aerodrome_label",
-      "minzoom": 10,
-      "filter": ["all", ["has", "iata"]],
-      "layout": {
-        "icon-image": "airport_11",
-        "icon-size": 1,
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-max-width": 9,
-        "text-offset": [0, 0.6],
-        "text-optional": true,
-        "text-padding": 2,
-        "text-size": 12,
-        "visibility": "visible"
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
         "text-halo-width": 1
       }
     },
